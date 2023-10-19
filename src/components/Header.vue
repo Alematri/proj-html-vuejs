@@ -1,11 +1,16 @@
 <script>
+  import Nav from './partials/Nav.vue';
+
   export default{
-  name: 'Header'
+  name: 'Header',
+  components:{
+    Nav,
+  }
 }
 </script>
 
 <template>
-  <h1>Header</h1>
+  <Nav />
 </template>
 
 <style lang="scss" scoped>
