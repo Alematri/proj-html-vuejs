@@ -1,11 +1,16 @@
 <script>
+  import SectionFeedback from './partials/SectionFeedback.vue';
+
   export default{
-  name: 'Main'
+  name: 'Main',
+  components:{
+    SectionFeedback,
+  }
 }
 </script>
 
 <template>
-  <h1>Main</h1>
+  <SectionFeedback />
 </template>
 
 <style lang="scss" scoped>

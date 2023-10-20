@@ -5,7 +5,7 @@
 </script>
 
 <template>
-  
+
   <nav>
     <div class="container">
       <div class="row">
@@ -54,6 +54,7 @@
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 99;
     .container{
       height: 100px;
       color: $gray;
