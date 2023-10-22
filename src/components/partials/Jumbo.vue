@@ -30,12 +30,11 @@
   .jumbo{
     height: 675px;
     width: 100%;
-    background: linear-gradient(to right, $black 45%, rgba(0, 0, 0, 0)) center center / cover, url(../../assets/img/Others/slider82x-scaled.jpg);
+    background: linear-gradient(to right, $black 45%, rgba(0, 0, 0, 0)) center / cover, url(../../assets/img/Others/slider82x-scaled.jpg);
     background-size: cover;
     margin-top: 100px;
     .container{
-    height: 100%;
-    }
+      height: 100%;
       h4{
         color: $red;
         padding-top: 134px;
@@ -59,40 +58,14 @@
         margin-top: 33px;
         margin-right: 15px;
       }
-      button.btn-primary{
-        background-color: $blue;
-      }
       button.btn-outline-dark{
         color: $white;
       }
       .fa-play-container {
-        position: absolute;
         top: 40%;
         right: 24%;
-        width: 60px;
-        height: 60px;
-        background-color: white;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        transition: background-color 0.3s, transform 0.3s;
       }
-      .fa-play-container:hover{
-        background-color: transparent;
-        transform: scale(1.2);
-      }
-        .fa-play{
-        color: $blue;
-        font-size: 15px;
-        position: relative;
-        transition: font-size 0.3s;
-      }
-      .fa-play-container:hover .fa-play {
-      font-size: 20px;
-      }
+    }
   }
-
 
 </style>

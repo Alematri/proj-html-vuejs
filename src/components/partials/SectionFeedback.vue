@@ -8,7 +8,7 @@
   <section>
     <div class="container">
       <div class="card-container d-flex justify-content-between">
-        <div class="card">
+        <div class="card"> <!-- //DINAMICIZZARE -->
           <img src="../../assets/img/Others/ghirigorobianco.png">
           <h3>Crossfit workout</h3> 
           <h6>Push your limits</h6>
@@ -44,17 +44,17 @@
   section{
     height: 1020px;
     width: 100%;
-  background-image: linear-gradient(to bottom right, blue, red);
+    background-image: linear-gradient(to bottom right, blue, red);
   }
     .card-container{
       min-height: 300px;
       position: relative;
-      top: -80px;
+      bottom: 80px;
       .card{
         height: 435px;
         width: 407px;
         border-bottom-right-radius: 40px;
-        background-image: url(../../assets/img/Others/service6-2x.jpg);
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 35%, rgba(0, 0, 0, 0)) center center / cover, url(../../assets/img/Others/service6-2x.jpg); //DYNAMICIZZARE
         background-size: cover;
         border: 0;
         box-shadow: 10px 10px 10px rgba($color: $black, $alpha: .2);
@@ -76,8 +76,8 @@
       text-align: center;
       color: white;
       width: 80%;
-      margin: 0px auto 0px;
-      padding-top: 150px;
+      margin: 0px auto;
+      padding-top: 140px;
     }
     .img-container {
       img{

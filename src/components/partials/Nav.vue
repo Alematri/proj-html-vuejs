@@ -90,9 +90,9 @@
           height: 100px;
           button{
             border-radius: 20px;
-            background-color: $blue;
-            padding: 11px 34px;
+            padding: 11px 26px;
             font-size: 13px;
+            margin: auto 0;
           }
           i{
             margin-left: 44px;

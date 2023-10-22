@@ -1,2 +1,32 @@
 @use './partials/vars' as *;
 @import 'bootstrap/scss/bootstrap';
+
+
+
+// PLAY BUTTON !
+
+.fa-play-container {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+.fa-play-container:hover{
+  background-color: transparent;
+  transform: scale(1.2);
+}
+  .fa-play{
+  color: $blue;
+  font-size: 15px;
+  position: relative;
+  transition: font-size 0.3s;
+}
+.fa-play-container:hover .fa-play {
+font-size: 20px;
+}
