@@ -7,23 +7,38 @@
 <template>
   <section>
     <div class="container">
+
       <div class="card-container d-flex justify-content-between">
+
         <div class="card"> <!-- //DINAMICIZZARE -->
-          <img src="../../assets/img/Others/ghirigorobianco.png">
-          <h3>Crossfit workout</h3> 
-          <h6>Push your limits</h6>
+          <img class="background" src="../../assets/img/Others/service6-2x.jpg">
+          <div class="card-info d-flex flex-column justify-content-end">
+            <img class="ghirigoro ms-5" src="../../assets/img/Others/ghirigorobianco.png">
+            <h3 class="ms-5">Crossfit workout</h3> 
+            <h6 class="ms-5 mb-5">Push your limits</h6>
+          </div>
         </div>
-        <div class="card">
-          <img src="../../assets/img/Others/ghirigorobianco.png">
-          <h3>Crossfit workout</h3>
-          <h6>Push your limits</h6>
+
+        <div class="card"> <!-- //DINAMICIZZARE -->
+          <img class="background" src="../../assets/img/Others/service6-2x.jpg">
+          <div class="card-info d-flex flex-column justify-content-end">
+            <img class="ghirigoro ms-5" src="../../assets/img/Others/ghirigorobianco.png">
+            <h3 class="ms-5">Crossfit workout</h3> 
+            <h6 class="ms-5 mb-5">Push your limits</h6>
+          </div>
         </div>
-        <div class="card">
-          <img src="../../assets/img/Others/ghirigorobianco.png">
-          <h3>Crossfit workout</h3>
-          <h6>Push your limits</h6>
+
+        <div class="card"> <!-- //DINAMICIZZARE -->
+          <img class="background" src="../../assets/img/Others/service6-2x.jpg">
+          <div class="card-info d-flex flex-column justify-content-end">
+            <img class="ghirigoro ms-5" src="../../assets/img/Others/ghirigorobianco.png">
+            <h3 class="ms-5">Crossfit workout</h3> 
+            <h6 class="ms-5 mb-5">Push your limits</h6>
+          </div>
         </div>
+
       </div>
+
       <h1>"How you respond to the challenge in the second half will determine what you becaome after the game, whether you are a winner or a loser."</h1>
       <div class="img-container d-flex justify-content-center">
        <img src="../../assets/img/Others/ghirigoro.png">
@@ -47,28 +62,37 @@
     background-image: linear-gradient(to bottom right, blue, red);
   }
     .card-container{
-      min-height: 300px;
       position: relative;
       bottom: 80px;
       .card{
-        height: 435px;
+        height: 420px;
         width: 407px;
         border-bottom-right-radius: 40px;
-        background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 35%, rgba(0, 0, 0, 0)) center center / cover, url(../../assets/img/Others/service6-2x.jpg); //DYNAMICIZZARE
-        background-size: cover;
         border: 0;
         box-shadow: 10px 10px 10px rgba($color: $black, $alpha: .2);
-        padding: 40px;
-        img{
-          margin-top: 260px;
-          width: 40px;
+
+        img.background{
+          position: absolute;
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+          border-bottom-right-radius: 40px;
         }
-        h3{
-          color: $white;
-          margin-top: 25px;
-        }
-        h6{
-          color: $yellow;
+        .card-info{
+          height: 100%;
+          z-index: 2;
+          background-image: linear-gradient(to top, $black, transparent);
+          border-bottom-right-radius: 40px;
+          img.ghirigoro{
+            width: 40px;
+          }
+          h3{
+            color: $white;
+            margin-top: 25px;
+          }
+          h6{
+            color: $yellow;
+          }
         }
       }
     }

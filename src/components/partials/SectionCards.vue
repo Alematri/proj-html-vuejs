@@ -60,7 +60,7 @@ name: 'SectionCards'
           height: 560px;
           width: 400px;
           border: 3px solid $blue;
-          border-radius: 2px;
+          border-radius: 10px;
           background-color: $black;
         }
         h3{
