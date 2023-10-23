@@ -72,6 +72,10 @@
         border-bottom-right-radius: 40px;
         border: 0;
         box-shadow: 10px 10px 10px rgba($color: $black, $alpha: .2);
+      &:hover{
+        transform: scale(1.05);
+        transition: transform 0.2s ease-in-out;
+      }
 
         img.background{
           position: absolute;

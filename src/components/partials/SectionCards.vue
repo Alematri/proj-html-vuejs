@@ -72,6 +72,10 @@ name: 'SectionCards',
           border: 3px solid $blue;
           border-radius: 10px;
           background-color: $black;
+          &:hover{
+          transform: scale(1.05);
+          transition: transform 0.2s ease-in-out;
+      }
         }
         h3{
           color: $white;
