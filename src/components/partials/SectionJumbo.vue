@@ -28,7 +28,6 @@
 
   section{
     height: 675px;
-    width: 100%;
     background: linear-gradient(to right, $black 45%, rgba(0, 0, 0, 0)) center / cover, url(../../assets/img/Others/banner1-2x.jpg);
     background-size: cover;
     margin-top: 100px;
