@@ -5,6 +5,8 @@
   import SectionCards from './partials/SectionCards.vue';
   import SectionArticles from './partials/SectionArticles.vue';
   import SectionBuy from './partials/SectionBuy.vue';
+  import SectionWhiteCards from './partials/SectionWhiteCards.vue';
+  import SectionCrossfit from './partials/SectionCrossfit.vue';
 
   export default{
   name: 'Main',
@@ -15,6 +17,8 @@
     SectionCards,
     SectionArticles,
     SectionBuy,
+    SectionWhiteCards,
+    SectionCrossfit,
   }
 }
 </script>
@@ -26,6 +30,8 @@
   <SectionCards />
   <SectionArticles />
   <SectionBuy />
+  <SectionWhiteCards />
+  <SectionCrossfit />
 </template>
 
 <style lang="scss" scoped>

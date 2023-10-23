@@ -35,6 +35,7 @@
     margin-top: 100px;
     .container{
       height: 100%;
+      position: relative;
       h4{
         color: $red;
         padding-top: 134px;
@@ -71,8 +72,8 @@
         }
       }
       .fa-play-container {
-        top: 40%;
-        right: 24%;
+        top: 38%;
+        right: 8%;
       }
     }
   }

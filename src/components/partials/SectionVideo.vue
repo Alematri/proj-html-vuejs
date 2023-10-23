@@ -112,8 +112,9 @@
         position: relative;
         bottom: 58px;
         .fa-play-container {
+          transform: translate(-50%,-50%);
           top: 50%;
-          right: 50%;
+          left: 50%;
         }
       }
       .info{
@@ -159,6 +160,7 @@
           padding: 0px;
           box-shadow: 10px 10px 10px rgba($color: $black, $alpha: .2);
           border-bottom-right-radius: 40px;
+          position: relative;
             img{
               object-fit: cover;
               width: 100%;
@@ -166,8 +168,9 @@
               border-bottom-right-radius: 40px;
             }
           .fa-play-container{
-            top: 40%;
-            right: 43%;
+            transform: translate(-50%,-50%);
+            top: 50%;
+            left: 50%;
           }
         }
         .card-info{
