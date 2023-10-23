@@ -1,42 +1,52 @@
 <script>
 export default{
-name: 'SectionCards'
-}
+name: 'SectionCards',
+  data() {
+    return {
+      cards: [
+        {
+          background: "/img/smartwatch.png",
+          title: "Team training",
+          subtitle: "Find a partner",
+          paragraph: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi voluptatibus ut temporibus illum minus nihil atque dicta quam a iure?",
+          link: "Find a partner"
+        },
+        {
+          background: "/img/dumbell.png",
+          title: "Crossfit workout",
+          subtitle: "Push your limits",
+          paragraph: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi voluptatibus ut temporibus illum minus nihil atque dicta quam a iure?",
+          link: "Learn about Crossfit"
+        },
+        {
+          background: "/img/body.png",
+          title: "Weight loss plan",
+          subtitle: "Shed those pounds",
+          paragraph: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi voluptatibus ut temporibus illum minus nihil atque dicta quam a iure?",
+          link: "Schedule a workout"
+        },
+      ],
+    };
+  },
+};
 </script>
+
+
 
 <template>
   <section>
     <div class="container">
       <div class="card-wrapper d-flex align-items-center justify-content-between">
 
-        <div class="card d-flex flex-column align-items-center justify-content-around p-5">
-          <img src="../../assets/img/Others/smartwatch.png">
+        <div class="card d-flex flex-column align-items-center justify-content-around p-5"
+        v-for="(card, index) in cards" :key="index">
+          <img :src="card.background">
           <div class="div">
-            <h3>Team training</h3>
-            <h4>Find a partner</h4>
+            <h3>{{card.title}}</h3>
+            <h4>{{card.subtitle}}</h4>
           </div>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid voluptatum eum expedita fugit dolor earum eligendi corporis reprehenderit perferendis ea?</p>
-          <a href="#">Find a partner<i class="fa-solid fa-angle-right ms-2"></i></a>
-        </div>
-
-        <div class="card d-flex flex-column align-items-center justify-content-around p-5">
-          <img src="../../assets/img/Others/smartwatch.png">
-          <div class="div">
-            <h3>Team training</h3>
-            <h4>Find a partner</h4>
-          </div>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid voluptatum eum expedita fugit dolor earum eligendi corporis reprehenderit perferendis ea?</p>
-          <a href="#">Find a partner<i class="fa-solid fa-angle-right ms-2"></i></a>
-        </div>
-
-        <div class="card d-flex flex-column align-items-center justify-content-around p-5">
-          <img src="../../assets/img/Others/smartwatch.png">
-          <div class="div">
-            <h3>Team training</h3>
-            <h4>Find a partner</h4>
-          </div>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid voluptatum eum expedita fugit dolor earum eligendi corporis reprehenderit perferendis ea?</p>
-          <a href="#">Find a partner<i class="fa-solid fa-angle-right ms-2"></i></a>
+          <p>{{card.paragraph}}</p>
+          <a href="#">{{card.link}}<i class="fa-solid fa-angle-right ms-2"></i></a>
         </div>
 
       </div>

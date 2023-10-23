@@ -1,7 +1,28 @@
 <script>
   export default{
-  name: 'SectionVideo'
-}
+  name: 'SectionVideo',
+  data() {
+      return {
+        cards: [
+          {
+            background: "/img/video2-2x.jpg",
+            title: "Things & glute workout",
+            subtitle: "Increase your mobility",
+          },
+          {
+            background: "/img/video7-2x.jpg",
+            title: "Lift, firm & perk up",
+            subtitle: "Feel young again",
+          },
+          {
+            background: "/img/video9-2x.jpg",
+            title: "Slim & trim your waist",
+            subtitle: "Shed those extra pounds",
+          },
+        ],
+      };
+    },
+  };
 </script>
 
 <template>
@@ -16,6 +37,7 @@
       </div>
 
       <div class="info">
+
         <h3>Tune up your workouts</h3>
         <h1>The Best health & fitness advice online</h1>
 
@@ -32,6 +54,7 @@
         <button class="btn btn-primary" type="submit"><i class="fa-brands fa-youtube me-2"></i>Visit my YouTube channel</button>
       
       </div>
+
     </div>
 
     <div class="bottom-section container">
@@ -44,49 +67,25 @@
 
       <div class="card-container mt-5 d-flex justify-content-between">
 
-        <div class="d-flex flex-column">
-          <div class="card">
-            <img src="../../assets/img/Others/video2-2x.jpg"> <!-- //DINAMICIZZARE -->
-            <div class="fa-play-container">
-              <i class="fa-solid fa-play"></i>
-            </div>
-          </div>
-          
-          <div class="card-info mt-4">
-            <h4>Things & glute workout</h4>
-            <h6>Increase your mobility</h6>
-          </div>
-        </div>
-        
-        <div class="d-flex flex-column">
-          <div class="card">
-            <img src="../../assets/img/Others/video2-2x.jpg">
-            <div class="fa-play-container">
-              <i class="fa-solid fa-play"></i>
-            </div>
-          </div>
-          
-          <div class="card-info mt-4">
-            <h4>Things & glute workout</h4>
-            <h6>Increase your mobility</h6>
-          </div>
-        </div>
+        <div class="d-flex flex-column"
+        v-for="(card, index) in cards" :key="index">
 
-        <div class="d-flex flex-column">
           <div class="card">
-            <img src="../../assets/img/Others/video2-2x.jpg">
+            <img class="background" :src="card.background">
             <div class="fa-play-container">
               <i class="fa-solid fa-play"></i>
             </div>
           </div>
           
           <div class="card-info mt-4">
-            <h4>Things & glute workout</h4>
-            <h6>Increase your mobility</h6>
+            <h4>{{ card.title }}</h4>
+            <h6>{{ card.subtitle }}</h6>
           </div>
+
         </div>
         
       </div>
+
     </div>
 
   </section>
@@ -161,7 +160,7 @@
           box-shadow: 10px 10px 10px rgba($color: $black, $alpha: .2);
           border-bottom-right-radius: 40px;
           position: relative;
-            img{
+            img.background{
               object-fit: cover;
               width: 100%;
               height: 100%;

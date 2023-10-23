@@ -1,7 +1,28 @@
 <script>
   export default{
-  name: 'SectionFeedback'
-}
+  name: 'SectionFeedback',
+    data() {
+      return {
+        cards: [
+          {
+            background: "/img/service6-2x.jpg",
+            title: "Crossfit workout",
+            subtitle: "Push your limits",
+          },
+          {
+            background: "/img/box1-2x.jpg",
+            title: "New gym apparel",
+            subtitle: "Look good, feel good",
+          },
+          {
+            background: "/img/box3-2x.jpg",
+            title: "Team training",
+            subtitle: "Find a partner",
+          },
+        ],
+      };
+    },
+  };
 </script>
 
 <template>
@@ -10,30 +31,12 @@
 
       <div class="card-container d-flex justify-content-between">
 
-        <div class="card"> <!-- //DINAMICIZZARE -->
-          <img class="background" src="../../assets/img/Others/service6-2x.jpg">
+        <div class="card" v-for="(card, index) in cards" :key="index">
+          <img class="background" :src="card.background">
           <div class="card-info d-flex flex-column justify-content-end">
             <img class="ghirigoro ms-5" src="../../assets/img/Others/ghirigorobianco.png">
-            <h3 class="ms-5">Crossfit workout</h3> 
-            <h6 class="ms-5 mb-5">Push your limits</h6>
-          </div>
-        </div>
-
-        <div class="card"> <!-- //DINAMICIZZARE -->
-          <img class="background" src="../../assets/img/Others/service6-2x.jpg">
-          <div class="card-info d-flex flex-column justify-content-end">
-            <img class="ghirigoro ms-5" src="../../assets/img/Others/ghirigorobianco.png">
-            <h3 class="ms-5">Crossfit workout</h3> 
-            <h6 class="ms-5 mb-5">Push your limits</h6>
-          </div>
-        </div>
-
-        <div class="card"> <!-- //DINAMICIZZARE -->
-          <img class="background" src="../../assets/img/Others/service6-2x.jpg">
-          <div class="card-info d-flex flex-column justify-content-end">
-            <img class="ghirigoro ms-5" src="../../assets/img/Others/ghirigorobianco.png">
-            <h3 class="ms-5">Crossfit workout</h3> 
-            <h6 class="ms-5 mb-5">Push your limits</h6>
+            <h3 class="ms-5">{{ card.title }}</h3>
+            <h6 class="ms-5 mb-5">{{ card.subtitle }}</h6>
           </div>
         </div>
 
@@ -60,7 +63,6 @@
     height: 1020px;
     width: 100%;
     background-image: linear-gradient(to bottom right, blue, red);
-  }
     .card-container{
       position: relative;
       bottom: 80px;
@@ -123,4 +125,6 @@
         color: white;
       }
     }
+  }
+
 </style>

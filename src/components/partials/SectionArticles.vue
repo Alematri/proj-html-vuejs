@@ -1,7 +1,28 @@
 <script>
 export default{
-  name: 'SectionArticles'
-}
+  name: 'SectionArticles',
+  data() {
+      return {
+        cards: [
+          {
+            background: "/img/blog4-2x.jpg",
+            title: "The best protein shake",
+            subtitle: "By admin | November 26th, 2019 | Gym",
+          },
+          {
+            background: "/img/blog3-2x.jpg",
+            title: "Lift, firm & perk up",
+            subtitle: "By admin | November 26th, 2019 | Gym",
+          },
+          {
+            background: "/img/blog1-2x.jpg",
+            title: "Slim & trim your waist",
+            subtitle: "By admin | November 26th, 2019 | Gym",
+          },
+        ],
+      };
+    },
+  };
 </script>
 
 <template>
@@ -15,38 +36,17 @@ export default{
         <a href="#"><span>Read all articles</span><i class="fa-solid fa-angle-right ms-2 me-5"></i></a>
       </div>
 
-      <div class="card-container mt-5 d-flex justify-content-between">
+      <div class="card-container mt-5  d-flex justify-content-between">
 
-        <div class="d-flex flex-column">
+        <div class="d-flex flex-column"
+        v-for="(card, index) in cards" :key="index">
           <div class="card">
-            <img src="../../assets/img/Others/blog4-2x.jpg"> <!-- //DINAMICIZZARE -->
+            <img :src="card.background">
           </div>
           
           <div class="card-info mt-4">
-            <h4>The best protein shake</h4>
-            <h6>By admin | Novembre 26th 2019 | Gym</h6>
-          </div>
-        </div>
-        
-        <div class="d-flex flex-column">
-          <div class="card">
-            <img src="../../assets/img/Others/blog4-2x.jpg"> <!-- //DINAMICIZZARE -->
-          </div>
-          
-          <div class="card-info mt-4">
-            <h4>The best protein shake</h4>
-            <h6>By admin | Novembre 26th 2019 | Gym</h6>
-          </div>
-        </div>
-
-        <div class="d-flex flex-column">
-          <div class="card">
-            <img src="../../assets/img/Others/blog4-2x.jpg"> <!-- //DINAMICIZZARE -->
-          </div>
-          
-          <div class="card-info mt-4">
-            <h4>The best protein shake</h4>
-            <h6>By admin | Novembre 26th 2019 | Gym</h6>
+            <h4>{{ card.title }}</h4>
+            <h6>{{ card.subtitle }}</h6>
           </div>
         </div>
         
