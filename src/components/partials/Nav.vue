@@ -93,6 +93,10 @@
             padding: 11px 26px;
             font-size: 13px;
             margin: auto 0;
+            border: 0;
+            &:hover{
+              background-color: $red;
+            }
           }
           i{
             margin-left: 44px;

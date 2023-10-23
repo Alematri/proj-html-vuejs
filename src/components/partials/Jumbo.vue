@@ -11,8 +11,8 @@
       <h1>Take control of your health</h1>
       <img src="../../assets/img/Others/ghirigoro.png">
       <h5>Curabitur non nulla sit amet nisl tempus convaliis quis ac lectus dolor sit amet.</h5>
-      <button class="btn btn-primary" type="submit"><i class="fa-brands fa-youtube"></i><span class="ms-2">Visit my YouTube channel</span></button>
-      <button type="button" class="btn btn-outline-dark"><span class="me-2">Buy Avada today</span><i class="fa-solid fa-arrow-right"></i></button>
+      <button class="btn btn-primary"><i class="fa-brands fa-youtube"></i><span class="ms-2">Visit my YouTube channel</span></button>
+      <button class="btn btn-outline-dark"><span class="me-2">Buy Avada today</span><i class="fa-solid fa-arrow-right"></i></button>
 
       <div class="fa-play-container">
         <i class="fa-solid fa-play"></i>
@@ -58,8 +58,17 @@
         margin-top: 33px;
         margin-right: 15px;
       }
+      button.btn-primary:hover{
+        background-color: $red;
+        border: 1px solid $red;
+      }
       button.btn-outline-dark{
         color: $white;
+        &:hover{
+          background-color: $white;
+          color: $black;
+          border: 1px solid $white;
+        }
       }
       .fa-play-container {
         top: 40%;
