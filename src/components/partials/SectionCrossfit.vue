@@ -12,7 +12,7 @@
       </div>
       <h1>Crossfit workout of the day</h1>
       <h2>November 15th, 2019</h2>
-      <h6>View all videos<i class="ms-2 fa-solid fa-arrow-right"></i></h6>
+      <a href="#">View all videos<i class="ms-2 fa-solid fa-arrow-right"></i></a>
 
     </div>
   </section>
@@ -47,9 +47,10 @@
         color: $yellow;
         margin-top: 33px;
       }
-      h6{
+      a{
         margin-top: 20px;
         color: $white;
+        text-decoration: none;
       }
     }
   }
