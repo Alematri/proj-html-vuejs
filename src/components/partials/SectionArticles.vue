@@ -1,27 +1,12 @@
 <script>
+import { SectionArticlesData } from '../data/data';
 export default{
   name: 'SectionArticles',
   data() {
       return {
-        cards: [
-          {
-            background: "/img/blog4-2x.jpg",
-            title: "The best protein shake",
-            subtitle: "By admin | November 26th, 2019 | Gym",
-          },
-          {
-            background: "/img/blog3-2x.jpg",
-            title: "Lift, firm & perk up",
-            subtitle: "By admin | November 26th, 2019 | Gym",
-          },
-          {
-            background: "/img/blog1-2x.jpg",
-            title: "Slim & trim your waist",
-            subtitle: "By admin | November 26th, 2019 | Gym",
-          },
-        ],
-      };
-    },
+        SectionArticlesData,
+      }
+    }
   };
 </script>
 
@@ -39,7 +24,7 @@ export default{
       <div class="card-container mt-5  d-flex justify-content-between">
 
         <div class="d-flex flex-column"
-        v-for="(card, index) in cards" :key="index">
+        v-for="(card, index) in SectionArticlesData" :key="index">
           <div class="card">
             <img :src="card.background">
           </div>

@@ -1,25 +1,10 @@
 <script>
+  import { SectionFeedbackData } from '../data/data';
   export default{
   name: 'SectionFeedback',
     data() {
       return {
-        cards: [
-          {
-            background: "/img/service6-2x.jpg",
-            title: "Crossfit workout",
-            subtitle: "Push your limits",
-          },
-          {
-            background: "/img/box1-2x.jpg",
-            title: "New gym apparel",
-            subtitle: "Look good, feel good",
-          },
-          {
-            background: "/img/box3-2x.jpg",
-            title: "Team training",
-            subtitle: "Find a partner",
-          },
-        ],
+        SectionFeedbackData,
       };
     },
   };
@@ -31,7 +16,7 @@
 
       <div class="card-container d-flex justify-content-between">
 
-        <div class="card" v-for="(card, index) in cards" :key="index">
+        <div class="card" v-for="(card, index) in SectionFeedbackData" :key="index">
           <img class="background" :src="card.background">
           <div class="card-info d-flex flex-column justify-content-end">
             <img class="ghirigoro ms-5" src="../../assets/img/Others/ghirigorobianco.png">

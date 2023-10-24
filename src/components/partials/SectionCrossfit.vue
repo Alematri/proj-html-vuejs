@@ -1,7 +1,17 @@
 <script>
+  import { DateTime } from "luxon";
   export default{
-  name: 'SectionCrossfit'
-}
+  name: 'SectionCrossfit',
+  data() {
+    return {
+      formattedDate: "",
+    };
+  },
+  created() {
+    const today = DateTime.now();
+    this.formattedDate = today.toFormat("LLLL dd, yyyy");
+  },
+};
 </script>
 
 <template>
@@ -11,7 +21,7 @@
         <i class="fa-solid fa-play"></i>
       </div>
       <h1>Crossfit workout of the day</h1>
-      <h2>November 15th, 2019</h2>
+      <h2>{{ formattedDate }}</h2>
       <a href="#">View all videos<i class="ms-2 fa-solid fa-arrow-right"></i></a>
 
     </div>

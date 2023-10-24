@@ -1,33 +1,12 @@
 <script>
+import { SectionCardsData } from '../data/data';
 export default{
 name: 'SectionCards',
   data() {
     return {
-      cards: [
-        {
-          background: "/img/smartwatch.png",
-          title: "Team training",
-          subtitle: "Find a partner",
-          paragraph: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi voluptatibus ut temporibus illum minus nihil atque dicta quam a iure?",
-          link: "Find a partner"
-        },
-        {
-          background: "/img/dumbell.png",
-          title: "Crossfit workout",
-          subtitle: "Push your limits",
-          paragraph: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi voluptatibus ut temporibus illum minus nihil atque dicta quam a iure?",
-          link: "Learn about Crossfit"
-        },
-        {
-          background: "/img/body.png",
-          title: "Weight loss plan",
-          subtitle: "Shed those pounds",
-          paragraph: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi voluptatibus ut temporibus illum minus nihil atque dicta quam a iure?",
-          link: "Schedule a workout"
-        },
-      ],
-    };
-  },
+      SectionCardsData,
+    }
+  }
 };
 </script>
 
@@ -39,7 +18,7 @@ name: 'SectionCards',
       <div class="card-wrapper d-flex align-items-center justify-content-between">
 
         <div class="card d-flex flex-column align-items-center justify-content-around p-5"
-        v-for="(card, index) in cards" :key="index">
+        v-for="(card, index) in SectionCardsData" :key="index">
           <img :src="card.background">
           <div class="div">
             <h3>{{card.title}}</h3>

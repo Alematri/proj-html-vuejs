@@ -1,27 +1,12 @@
 <script>
+  import { SectionVideoData } from '../data/data';
   export default{
   name: 'SectionVideo',
   data() {
       return {
-        cards: [
-          {
-            background: "/img/video2-2x.jpg",
-            title: "Things & glute workout",
-            subtitle: "Increase your mobility",
-          },
-          {
-            background: "/img/video7-2x.jpg",
-            title: "Lift, firm & perk up",
-            subtitle: "Feel young again",
-          },
-          {
-            background: "/img/video9-2x.jpg",
-            title: "Slim & trim your waist",
-            subtitle: "Shed those extra pounds",
-          },
-        ],
-      };
-    },
+        SectionVideoData,
+      }
+    }
   };
 </script>
 
@@ -68,7 +53,7 @@
       <div class="card-container mt-5 d-flex justify-content-between">
 
         <div class="d-flex flex-column"
-        v-for="(card, index) in cards" :key="index">
+        v-for="(card, index) in SectionVideoData" :key="index">
 
           <div class="card">
             <img class="background" :src="card.background">
